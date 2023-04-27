@@ -31,6 +31,7 @@ app.post('/api/notes', (req, res) => {
       fs.writeFile('./db/db.json', JSON.stringify(notes), (err) => {
         if (err) throw err;
         res.json(newNote);
+        console.log("Note saved successfully");
       });
     });
   });
@@ -44,8 +45,23 @@ app.post('/api/notes', (req, res) => {
         fs.writeFile('./db/db.json', JSON.stringify(filteredNotes), (err) => {
             if (err) throw err;
             res.json({ message: `Note ${id} deleted successfully.`});
+            console.log( `Note ${id} deleted successfully.`);
         });
     });
   });
 
-
+//Setting up a route to serve the HTML file
+app.get('/notes', (req, res) => {
+  const filePath = path.join(__dirname, 'public', 'notes.html');
+  res.sendFile(filePath);
+  //res.sendFile(path.join(__dirname, '/notes.html'));
+  });
+// Setting up a catch-all route to serve the index.html file
+  app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'index.html'));
+  });
+  
+// Starting the server
+  app.listen(PORT, () =>
+  console.log(`App listening at http://localhost:${PORT}`)
+  );

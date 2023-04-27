@@ -7,7 +7,7 @@ const path = require('path');
 
 //creating the express() app
 const app = express();
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 3001;
 
 //Setting up middleware
 app.use(express.json());

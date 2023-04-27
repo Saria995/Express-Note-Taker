@@ -40,3 +40,6 @@ THEN I am presented with empty fields to enter a new note title and the note’s
 
 
 ## Link to GitHub Repository
+https://github.com/Saria995/Express-Note-Taker.git
+
+## Heroku Page

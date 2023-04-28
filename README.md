@@ -38,8 +38,13 @@ THEN I am presented with empty fields to enter a new note title and the note’s
 ## Console Log in Terminal
 ![Alt text](images/Terminal.png)
 
+## Demo walkthrough
+
+![Alt text](images/Note%20Taker%20(1).gif)
+
 
 ## Link to GitHub Repository
 https://github.com/Saria995/Express-Note-Taker.git
 
 ## Heroku Page
+https://saria-express-note-taker.herokuapp.com/ 
